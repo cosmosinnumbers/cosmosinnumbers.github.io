@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmos in Numbers · Links</title>
+<meta name="description" content="Free stargazing chapter, the LOOK UP guide, and every Cosmos in Numbers channel in one place.">
+<meta property="og:title" content="Cosmos in Numbers · Links">
+<meta property="og:description" content="Commented SKY? Your free stargazing chapter is here.">
+<meta property="og:image" content="https://cosmosinnumbers.github.io/look-up-cover.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+main{max-width:520px;text-align:center;padding-top:28px}
+.av{width:84px;height:84px}
+h1{margin:8px 0 2px;font-size:1.5em} .tag{margin:0 0 22px}
+.hero{display:flex;gap:14px;align-items:center;text-align:left;background:#151c33;border:2px solid var(--acc);border-radius:14px;padding:14px;margin-bottom:14px;text-decoration:none;color:var(--fg)}
+.hero img{width:86px;border-radius:4px;box-shadow:0 6px 18px #0009;flex:none}
+.hero b{display:block;font-size:1.12em;color:var(--acc)} .hero small{color:var(--mut)}
+.l{display:block;background:#151c33;border:1px solid #2a3458;border-radius:12px;padding:14px 16px;margin:10px 0;color:var(--fg);text-decoration:none;font-weight:600}
+.l:hover,.hero:hover{transform:translateY(-1px);border-color:var(--acc)}
+.l small{display:block;font-weight:400;color:var(--mut)}
+.buy{background:var(--acc);color:#0b1020;border:0} .buy small{color:#3a2a10}
+.row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+.row a{flex:1 1 30%;min-width:96px;padding:10px 6px;border:1px solid #2a3458;border-radius:10px;text-decoration:none;color:var(--fg);font-size:.95em}
+[hidden]{display:none!important}
+</style></head>
+<body><main>
+<img class="av" src="logo.png" alt="Cosmos in Numbers logo">
+<h1>Cosmos in Numbers</h1>
+<p class="mut tag">Real space. Real data.</p>
+
+<!-- 1. Free gift first: everyone who commented SKY lands here -->
+<a class="hero" href="look-up-preview.pdf" download data-k="free">
+  <img src="look-up-cover.jpg" alt="LOOK UP cover">
+  <span><b>🎁 Commented SKY? Your free chapter</b>Chapter 1 of LOOK UP: your first night under the stars, no telescope needed.<br><small>26-page PDF · instant download · no email required</small></span>
+</a>
+
+<!-- 2. Paid product: shown as "buy" once GUMROAD is set below -->
+<a class="l buy" id="buy" hidden data-k="buy">📘 Get the full LOOK UP guide<small id="buyNote">173 pages · 45 field exercises · 2027 sky calendar + 14 bonus posters</small></a>
+<a class="l" id="soon" href="look-up.html" data-k="book">📘 LOOK UP: what's inside the full guide<small>Full book launching soon</small></a>
+
+<!-- 3. Newsletter: shown once NEWSLETTER is set below -->
+<a class="l" id="news" hidden data-k="news">✉️ Cosmos in Numbers Weekly<small>1 chart + 3 verified space stories every week, free</small></a>
+
+<!-- 4. Channels -->
+<a class="l" href="https://www.youtube.com/@CosmosinNumbers?sub_confirmation=1" data-k="yt">▶️ Watch the full videos on YouTube<small>Subscribe: new space numbers every day</small></a>
+<a class="l" href="https://www.facebook.com/groups/1116414697646044" data-k="group">🔭 Join the stargazing group<small>Share what you saw last night</small></a>
+
+<div class="row">
+  <a href="https://www.tiktok.com/@cosmosinnumbers">TikTok</a>
+  <a href="https://www.instagram.com/cosmos.innumbers/">Instagram</a>
+  <a href="https://www.facebook.com/profile.php?id=61595601862434">Facebook</a>
+</div>
+<p class="mut" style="font-size:.85em"><a href="index.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</main>
+<script>
+// ===== Fill these when the accounts exist (Claude updates them) =====
+var GUMROAD = "";      // e.g. "https://cosmosinnumbers.gumroad.com/l/lookup"
+var LAUNCH_CODE = "";  // e.g. "LAUNCH9" -> shows "$9 launch price"
+var NEWSLETTER = "";   // e.g. "https://cosmos-in-numbers.beehiiv.com/subscribe"
+// =====================================================================
+var src = (new URLSearchParams(location.search).get("src") || "direct").replace(/[^a-z0-9_-]/gi, "").slice(0, 20);
+if (GUMROAD) {
+  var b = document.getElementById("buy"), u = new URL(GUMROAD);
+  if (LAUNCH_CODE) { u.pathname = u.pathname.replace(/\/$/, "") + "/" + LAUNCH_CODE;
+    document.getElementById("buyNote").textContent = "Launch price $9 (then $14) · 173 pages · 45 field exercises · 2027 calendar + 14 posters"; }
+  u.searchParams.set("referrer", src); u.searchParams.set("utm_source", src); u.searchParams.set("utm_medium", "linkinbio");
+  b.href = u.toString(); b.hidden = false;
+  document.getElementById("soon").hidden = true;
+}
+if (NEWSLETTER) { var n = document.getElementById("news"), v = new URL(NEWSLETTER);
+  v.searchParams.set("utm_source", src); n.href = v.toString(); n.hidden = false; }
+</script>
+</body></html>
