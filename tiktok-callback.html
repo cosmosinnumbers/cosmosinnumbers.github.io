@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>TikTok connection — Cosmos tools</title><link rel="stylesheet" href="style.css">
+<style>#code{font:600 1rem ui-monospace,monospace;word-break:break-all;padding:12px;border:1px solid currentColor;border-radius:8px;margin:12px 0}button{font:inherit;padding:10px 16px;border-radius:8px;cursor:pointer}</style></head>
+<body><main><h1>TikTok connection — Cosmos tools</h1>
+<p id="msg" class="mut">Reading the answer from TikTok…</p>
+<div id="code" hidden></div>
+<p><button id="copy" hidden>Copy code</button></p>
+<p id="next" hidden>Then open <a href="https://github.com/cosmosinnumbers/cosmos-automation/actions/workflows/tiktok-auth.yml">tiktok-auth</a> on GitHub, tap "Run workflow" and paste the code in the "code" field. The code works for a few minutes only.</p>
+<p class="mut">This page only shows the code in your browser: nothing is stored or sent anywhere. <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></p>
+<script>
+var p=new URLSearchParams(location.search),c=p.get("code"),e=p.get("error"),m=document.getElementById("msg");
+if(c){m.textContent="TikTok sent this authorisation code. Copy it:";var b=document.getElementById("code");b.textContent=c;b.hidden=false;
+var k=document.getElementById("copy");k.hidden=false;k.onclick=function(){navigator.clipboard.writeText(c).then(function(){k.textContent="Copied"})};
+document.getElementById("next").hidden=false;}
+else if(e){m.textContent="TikTok answered with an error: "+e+" "+(p.get("error_description")||"");}
+else{m.textContent="No code in this address: open the authorisation link printed by the tiktok-auth workflow first.";}
+</script></main></body></html>
