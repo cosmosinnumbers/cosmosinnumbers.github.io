@@ -31,8 +31,10 @@ h1{margin:8px 0 2px;font-size:1.5em} .tag{margin:0 0 22px}
   <span><b>🎁 Commented SKY? Your free chapter</b>Chapter 1 of LOOK UP: your first night under the stars, no telescope needed.<br><small>26-page PDF · instant download · no email required</small></span>
 </a>
 
+<a class="l" href="https://gum.co/u/uuqdh665" data-k="sky">🌙 Free: The Next 30 Nights<small>What to see in the sky this month · planets, Moon, meteor showers · updated weekly</small></a>
+
 <!-- 2. Paid product: shown as "buy" once GUMROAD is set below -->
-<a class="l buy" id="buy" hidden data-k="buy">📘 Get the full LOOK UP guide<small id="buyNote">173 pages · 30+ outdoor exercises · 2027 sky calendar + 14 bonus posters</small></a>
+<a class="l buy" id="buy" hidden data-k="buy">📘 Get the full LOOK UP guide<small id="buyNote">173 pages · 45 outdoor exercises · 2027 sky calendar + 14 bonus posters</small></a>
 <a class="l" id="soon" href="look-up.html" data-k="book">📘 LOOK UP: what's inside the full guide<small>Full book launching soon</small></a>
 
 <!-- 3. Newsletter: shown once NEWSLETTER is set below -->
@@ -52,14 +54,14 @@ h1{margin:8px 0 2px;font-size:1.5em} .tag{margin:0 0 22px}
 <script>
 // ===== Fill these when the accounts exist (Claude updates them) =====
 var GUMROAD = "https://cosmosinnumbers.gumroad.com/l/look-up";      // e.g. "https://cosmosinnumbers.gumroad.com/l/lookup"
-var LAUNCH_CODE = "LAUNCH9";  // e.g. "LAUNCH9" -> shows "$9 launch price"
+var LAUNCH_CODE = "COSMOS9";  // e.g. "COSMOS9" -> shows "$7.41 launch price"
 var NEWSLETTER = "";   // e.g. "https://cosmos-in-numbers.beehiiv.com/subscribe"
 // =====================================================================
 var src = (new URLSearchParams(location.search).get("src") || "direct").replace(/[^a-z0-9_-]/gi, "").slice(0, 20);
 if (GUMROAD) {
   var b = document.getElementById("buy"), u = new URL(GUMROAD);
   if (LAUNCH_CODE) { u.pathname = u.pathname.replace(/\/$/, "") + "/" + LAUNCH_CODE;
-    document.getElementById("buyNote").textContent = "$9 with LAUNCH9 until Nov 30 (then $14) · 173 pages · 2027 calendar + 14 posters"; }
+    document.getElementById("buyNote").textContent = "$7.41 with COSMOS9 until Nov 30 (then $14) · 173 pages · 2027 calendar + 14 posters"; }
   u.searchParams.set("referrer", src); u.searchParams.set("utm_source", src); u.searchParams.set("utm_medium", "linkinbio");
   b.href = u.toString(); b.hidden = false;
   document.getElementById("soon").hidden = true;
