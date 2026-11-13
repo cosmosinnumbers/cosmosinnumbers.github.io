@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LOOK UP: The Beginner's Stargazing Guide by the Numbers</title>
-<meta name="description" content="A practical 173-page guide to the night sky for complete beginners: 30+ outdoor exercises, 36 tables and a 2027 sky calendar computed from NASA/JPL data. No telescope needed. Chapter 1 free.">
+<meta name="description" content="A practical 173-page guide to the night sky for complete beginners: 45 outdoor exercises, 36 tables and a 2027 sky calendar computed from NASA/JPL data. No telescope needed. Chapter 1 free.">
 <meta property="og:title" content="LOOK UP: The Beginner's Stargazing Guide by the Numbers">
-<meta property="og:description" content="No telescope needed. 30+ outdoor exercises, 36 practical tables and a 2027 sky calendar. Every number sourced. Chapter 1 free.">
+<meta property="og:description" content="No telescope needed. 45 outdoor exercises, 36 practical tables and a 2027 sky calendar. Every number sourced. Chapter 1 free.">
 <meta property="og:image" content="https://cosmosinnumbers.github.io/look-up-cover.jpg">
 <link rel="stylesheet" href="style.css">
 <style>.book{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}.book img{border-radius:6px;width:240px;max-width:100%;box-shadow:0 10px 30px #0008}
@@ -17,9 +17,9 @@
 <div style="flex:1;min-width:260px"><h1>LOOK UP</h1>
 <p><strong>You don't need a telescope. You need to know where to look.</strong></p>
 <p>Most people who say "I can't see anything up there" never learned where and how to look. This 173-page guide takes you from your first night out to finding another galaxy with binoculars, with every number linked to its source.</p>
-<p class="price"><s>$14</s><b>$9</b> with code <b>LAUNCH9</b></p>
+<p class="price"><s>$14</s><b>$7.41</b> with code <b>COSMOS9</b></p>
 <p class="mut small" id="left">Launch price until 30 November 2026.</p>
-<p><a class="btn buy" href="https://cosmosinnumbers.gumroad.com/l/look-up/LAUNCH9">Get the full guide for $9</a>
+<p><a class="btn buy" href="https://cosmosinnumbers.gumroad.com/l/look-up/COSMOS9">Get the full guide for $7.41</a>
 <a class="btn ghost" href="look-up-preview.pdf" download>Read Chapter 1 free</a></p>
 <p class="mut small">PDF + EPUB · instant download · 14 bonus posters included</p></div></div>
 
@@ -49,7 +49,7 @@
 <b>What format?</b>PDF (6×9 in, selectable text) and EPUB, instant download. Read it on your phone outside.
 </div>
 
-<p style="margin-top:26px"><a class="btn buy" href="https://cosmosinnumbers.gumroad.com/l/look-up/LAUNCH9">Get LOOK UP for $9</a></p>
+<p style="margin-top:26px"><a class="btn buy" href="https://cosmosinnumbers.gumroad.com/l/look-up/COSMOS9">Get LOOK UP for $7.41</a></p>
 <p class="mut small">Written with the help of AI tools and checked against the cited sources (NASA, JPL, IMO, peer-reviewed research). NASA and the other organisations cited do not endorse this book.</p>
 </main>
 <script>
@@ -60,7 +60,7 @@ var d = Math.ceil((END - now) / 864e5);
 if (d > 0) document.getElementById("left").textContent = "Launch price ends 30 November 2026 (" + d + (d === 1 ? " day" : " days") + " left), then $14.";
 document.querySelectorAll("a.buy").forEach(function (a) {
   var u = new URL(a.href);
-  if (d <= 0) { u.pathname = u.pathname.replace(/\/LAUNCH9$/, ""); a.textContent = "Get the full guide for $14"; }
+  if (d <= 0) { u.pathname = u.pathname.replace(/\/COSMOS9$/, ""); a.textContent = "Get the full guide for $14"; }
   u.searchParams.set("referrer", src); u.searchParams.set("utm_source", src); u.searchParams.set("utm_medium", "bookpage");
   a.href = u.toString();
 });
