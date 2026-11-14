@@ -1,4 +1,12 @@
 :root{--bg:#0b1020;--fg:#e8ecf5;--mut:#9aa6c4;--acc:#f2a541}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif}
 main{max-width:760px;margin:0 auto;padding:40px 16px}
-a{color:var(--acc)} h1,h2{line-height:1.25} .mut{color:var(--mut)} img{border-radius:50%}
+a{color:var(--acc)} h1,h2{line-height:1.25} .mut{color:var(--mut)} img{border-radius:0}
+nav.top{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin:0 0 28px;padding-bottom:14px;border-bottom:1px solid #2a3458}
+nav.top a{text-decoration:none;font-weight:600} nav.top .brand{display:flex;align-items:center;gap:10px;color:var(--fg);margin-right:auto}
+nav.top .brand img{width:36px;height:36px}
+.hero-home{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:8px}.hero-home img{width:120px;height:120px;flex:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
+.card{background:#151c33;border:1px solid #2a3458;border-radius:12px;padding:14px 16px}.card h3{margin:0 0 6px;font-size:1.05em}.card p{margin:0}
+.btn{display:inline-block;background:var(--acc);color:#0b1020;font-weight:700;padding:11px 20px;border-radius:8px;text-decoration:none;margin:6px 8px 6px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid #2a3458;font-size:.92em}
